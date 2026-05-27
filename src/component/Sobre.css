@@ -1,0 +1,136 @@
+/* Container Principal adaptado para caber nos 50vh do pai */
+.sobre-container {
+  width: 100%;
+  height: 100%; /* Ocupa exatamente os 50vh da secção pai */
+  padding: 15px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, sans-serif;
+  
+  /* 🎯 O SEGREDO: Permite fazer scroll para baixo dentro dos 50vh se o texto for longo */
+  overflow-y: auto; 
+  
+  /* Suaviza o scroll no telemóvel */
+  -webkit-overflow-scrolling: touch; 
+}
+
+/* Títulos */
+.sobre-titulo, .contactos-titulo {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #222;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+/* Bloco de Texto de Introdução */
+.sobre-texto {
+  font-size: 13px;
+  line-height: 1.4;
+  color: #555;
+  margin-bottom: 12px;
+  text-align: justify;
+}
+
+/* Grid de Missão e Lema */
+.sobre-cards-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.info-card {
+  background: #fdf6f0; 
+  border-left: 4px solid #C9570B; 
+  padding: 8px 10px;
+  border-radius: 0 6px 6px 0;
+}
+
+.info-card span {
+  font-size: 11px;
+  color: #C9570B;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.info-card p {
+  font-size: 11px;
+  color: #444;
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* Divisor Estético */
+.sobre-divisor {
+  border: 0;
+  height: 1px;
+  background: #eee;
+  margin: 15px 0;
+}
+
+/* Lista de Contactos */
+.lista-contactos {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Cards clicáveis de contacto */
+.contacto-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 6px;
+  background: #f9f9f9;
+  border: 1px solid #eee;
+  text-decoration: none !important;
+  color: inherit;
+}
+
+.contacto-item:active {
+  background: #f0f0f0;
+}
+
+/* Destaque do WhatsApp */
+.contacto-item.whatsapp {
+  background: #eafaf1;
+  border-color: #25D366;
+}
+.contacto-item.whatsapp .label {
+  color: #128C7E;
+  font-weight: bold;
+}
+
+/* Ícones */
+.contacto-item .icone {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+/* Estrutura do Texto */
+.contacto-texto {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacto-texto .label {
+  font-size: 9px;
+  text-transform: uppercase;
+  color: #777;
+}
+
+.contacto-texto .dado {
+  font-size: 11px;
+  color: #222;
+  margin-top: 1px;
+  word-break: break-all;
+}

@@ -1,0 +1,64 @@
+.nav_bar{
+    border: bisque solid 3px;
+    
+}
+.liquid-text{
+    position: relative;
+    color: transparent;
+    -webkit-text-stroke: 2px #fff;
+}
+.liquid-text {
+  position: relative;
+  color: transparent;
+  -webkit-text-stroke: 1.5px #c9570b; /* Borda branca fina e elegante */
+}
+
+.liquid-text::before {
+  /* 💡 Captura o texto do HTML automaticamente */
+  content: attr(data-text); 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  
+  /* 💡 Cor do preenchimento: o teu Laranja Vangard! */
+  color: #c9570b;
+  -webkit-text-stroke: 0px transparent;
+  
+  overflow: hidden;
+  /* Linha guia brilhante na ponta do efeito */
+  border-right: 3px solid #c9570b; 
+  white-space: nowrap;
+  
+  /* Animação automática infinita ideal para Mobile-First */
+  animation: efeitoLiquido 3s ease-in-out infinite alternate;
+}
+
+/* Garante que no PC o hover também responda rápido se quiseres */
+.liquid-text:hover::before {
+  animation-play-state: paused;
+  width: 100%;
+}
+
+/* 🎥 O motor da animação que simula o enchimento da energia */
+@keyframes efeitoLiquido {
+  0% {
+    width: 0%;
+  }
+  30% {
+    width: 0%;
+  }
+  70% {
+    width: 100%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+li{
+    border: 2px solid black;
+    border-radius: 20px;
+    text-align: center;
+}

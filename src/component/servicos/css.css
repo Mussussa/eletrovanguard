@@ -1,0 +1,101 @@
+.servicos-container {
+  background-color: transparent;
+  font-family: sans-serif;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section-title {
+  color: #333;
+  font-size: 16px; /* Reduzido levemente para melhor equilíbrio no topo */
+  letter-spacing: 0.5px;
+}
+
+/* 🔘 BOTOES FIXOS E ADAPTADOS */
+.btn-categoria {
+  width: 31% !important;
+  padding: 8px 2px !important; /* Compactado verticalmente */
+  font-size: 11px !important;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  border: 2px solid #ccc !important;
+  background-color: #f8f9fa !important;
+  color: #666 !important;
+  border-radius: 6px !important;
+  transition: all 0.3s ease-in-out;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+.btn-categoria.active {
+  border-color: #c9570b !important;
+  background-color: #c9570b !important;
+  color: #ffffff !important;
+  box-shadow: 0px 3px 8px rgba(201, 87, 11, 0.3);
+}
+
+/* 📜 ROLL-X BLINDADO */
+.cards-scroll-x {
+  display: flex !important;
+  overflow-x: auto !important;
+  scroll-linecap: mandatory;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 8px !important; /* Espaço otimizado para não vazar a secção */
+  gap: 12px !important;
+  scrollbar-width: none;
+}
+
+.cards-scroll-x::-webkit-scrollbar {
+  display: none;
+}
+
+/* 🃏 OS CARDS EMAGRECIDOS PARA CABEREM NA SECÇÃO */
+.card-servico {
+  flex: 0 0 82% !important;
+  scroll-snap-align: center;
+  background: #ffffff !important;
+  border-left: 5px solid #c9570b !important;
+  border-radius: 8px !important;
+  padding: 10px 12px !important; /* Padding enxuto */
+  min-height: 110px !important; /* Altura segura e compacta */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: slideFadeEffect 0.4s ease-in-out;
+}
+
+.card-badge {
+  background-color: rgba(201, 87, 11, 0.1);
+  color: #c9570b;
+  font-size: 9px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 4px;
+  width: fit-content;
+  text-transform: uppercase;
+}
+
+.card-servico h5 {
+  color: #222;
+  font-size: 13px;
+}
+
+.card-servico p {
+  font-size: 11px;
+  line-height: 1.3;
+}
+
+@keyframes slideFadeEffect {
+  from {
+    opacity: 0;
+    transform: translateX(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

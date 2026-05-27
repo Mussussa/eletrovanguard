@@ -1,0 +1,38 @@
+/* ==========================================================================
+   1. CONFIGURAÇÃO E TAMANHO GERAL (Mantém todas iguais)
+   ========================================================================== */
+#carouselExampleAutoplaying,
+.carousel-inner,
+.carousel-item {
+  height: 100% !important;
+  width: 100% !important;
+}
+
+.carousel-item img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important; /* Mantém a proporção sem esmagar */
+}
+
+/* ==========================================================================
+   2. CONTROLO DE FOCO INDIVIDUAL PARA CADA IMAGEM (Ajusta aqui!)
+   ========================================================================== */
+
+
+/* ==========================================================================
+   3. SETAS E CONTROLOS (O teu laranja Vangard)
+   ========================================================================== */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(39%) sepia(81%) saturate(1915%) hue-rotate(360deg) brightness(95%) contrast(102%) !important;
+  width: 2.5rem !important;
+  height: 2.5rem !important;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  opacity: 1 !important; 
+}
+.hero{
+    background-color: antiquewhite !important;
+}

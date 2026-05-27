@@ -1,0 +1,59 @@
+/* 1. O RESET: Apenas para margens. TIRA A COR DAQUI! */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* 2. A COR DE FUNDO GLOBAL: Aplica no contentor do site */
+.corpo {
+  background-color: #c9570b;
+  min-height: 100vh;
+}
+
+section {
+  border: #000 solid 3px;
+  margin: 5px;
+}
+
+.menu {
+  height: 9vh;
+}
+
+/* 3. CORREÇÃO DO CARROSSEL: Garante que as imagens se adaptam aos 40vh da secção */
+.aprentacao {
+  height: 40vh;
+  border: #ece8e8 solid 3px;
+  background-color: aliceblue;
+  overflow: hidden; /* Corta o que passar dos 40vh */
+}
+
+/* Força as imagens do carrossel a ocupar o espaço da secção sem bugar */
+.carousel-inner, .carousel-item, .carousel-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover; /* Faz a foto preencher os 40vh com estilo industrial, sem esmagar */
+}
+
+/* O resto dos teus estilos mantém-se igual */
+/* 📌 AJUSTADO: Troca de height fixo por min-height para acomodar os cards sem transbordar */
+.servico { 
+  min-height: 35vh; 
+  border: #FBC702 solid 3px; 
+  border-radius: 5%;
+  overflow: hidden; /* Garante blindagem total contra quebras de layout */
+}
+.produtos { height: 40vh;;
+border-radius: 5%; 
+ overflow: hidden;
+}
+.formulario { height: 40vh; border: #ece8e8 solid 3px; }
+.galeria { height: 40vh; border: #ece8e8 solid 3px; }
+.sobre { 
+  height: 50vh; 
+  border: #ece8e8 solid 3px; 
+  border-radius: 8px;
+  overflow: hidden; /* Garante que nada sai para fora dos 50vh */
+  margin: 15px 0;
+  box-sizing: border-box; 
+}
